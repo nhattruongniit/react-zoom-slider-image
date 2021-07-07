@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import SliderImage from './components/SliderImage';
+
+const data = [
+  {
+    image: 'https://cdn.tgdd.vn/Products/Images/42/209800/oppo-reno2-f-xanh-1-org.jpg',
+    text: 'img1'
+  },
+  {
+    image: 'https://cdn.tgdd.vn/Products/Images/42/209800/oppo-reno2-f-xanh-4-org.jpg',
+    text: 'img2'
+  },
+  {
+    image: 'https://cdn.tgdd.vn/Products/Images/42/209800/oppo-reno2-f-xanh-10-org.jpg',
+    text: 'img3'
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SliderImage 
+        data={data} 
+        width="500px" 
+        showDescription={true} 
+        direction="right" 
+      />
     </div>
   );
 }
